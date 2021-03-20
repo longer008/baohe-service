@@ -1,0 +1,21 @@
+name: deploy-gh-pages
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js v14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+
+      - name: Install
+        run: yarn config set registry https://registry.npm.taobao.org && yarn
+      - name: Start Service
+        run: yarn service
