@@ -2,8 +2,9 @@ const Koa = require('koa')
 const app = new Koa()
 const router = require('koa-router')()
 const koaRequest = require('koa2-request') //koa封装的请求第三方接口的方法
+const cors = require('koa2-cors');
 
-app.use(router.routes())
+app.use(router.routes()).use(cors())
 
 const urlObj={
   'zhihu':'https://www.zhihu.com/api/v3/feed/topstory/hot-lists/total',
