@@ -1,0 +1,23 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+
+# local env files
+*.local
+
+# Log files
+*.log
+*.lock
+*.map
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+nohup.out
+package-lock.json
