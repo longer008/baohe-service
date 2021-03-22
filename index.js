@@ -11,6 +11,7 @@ const urlObj={
   'weibo':'https://m.weibo.cn/api/container/getIndex?containerid=106003type%3D25%26t%3D3%26disable_hot%3D1%26filter_type%3Drealtimehot',
   'joke':'https://api.vvhan.com/api/xh?type=json',
 }
+
 let request = async function (ctx,url) {
   //koa封装的请求第三方接口的方法(koa2-request)
   let res = await koaRequest({
