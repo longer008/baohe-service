@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "service": "nodemon ./index.js localhost 7002",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "service": "nodemon ./index.js localhost 7002"
   },
   "dependencies": {
     "koa": "^2.13.1",
