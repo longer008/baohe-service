@@ -22,9 +22,15 @@ let request = async function (ctx,url) {
   let resJson = JSON.parse(res.body)
   ctx.response.body = resJson
 }
+
 router
   .get('/', async ctx => {
-    ctx.body = 'hello'
+    const res={
+      name:'bahe-service',
+      author:'longer008',
+      repository: "https://github.com/longer008/baohe.git"
+    }
+    ctx.body = res
   })
   .get('/api/zhihu', async function (ctx) {
     await request(ctx,urlObj.zhihu)
@@ -36,7 +42,8 @@ router
     await request(ctx,urlObj.joke)
   })
 
-app.listen(7002)
-console.log('app started at port 7002...')
+app.listen(7002,()=>{
+  console.log('app started at port 7002...')
+})
 
 
