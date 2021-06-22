@@ -28,7 +28,7 @@ router
     const res={
       name:'bahe-service',
       author:'longer008',
-      repository: "https://github.com/longer008/baohe.git"
+      repository: "https://github.com/longer008/baohe-service.git"
     }
     ctx.body = res
   })
